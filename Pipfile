@@ -14,9 +14,9 @@ flask-bootstrap = "*"
 flask-mail = "*"
 flask-ckeditor = "*"
 flask-moment = "*"
-flask-debugtoolbar = "*"
 migrate = "*"
 faker = "*"
+flask-debugtoolbar = "*"
 flask-migrate = "*"
 
 [requires]

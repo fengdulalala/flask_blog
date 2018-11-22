@@ -56,6 +56,7 @@ def fake_posts(count=50):
 
 
 def fake_comments(count=500):
+    # 审核评论
     for i in range(count):
         comment = Comment(
             author=fake.name(),
@@ -70,7 +71,7 @@ def fake_comments(count=500):
 
     salt = int(count * 0.1)
     for i in range(salt):
-        # unreviewed comments
+        # 未审核评论
         comment = Comment(
             author=fake.name(),
             email=fake.email(),
@@ -82,7 +83,7 @@ def fake_comments(count=500):
         )
         db.session.add(comment)
 
-        # from admin
+        # 来自管理员发表的
         comment = Comment(
             author='Mima Kirigoe',
             email='mima@example.com',
@@ -96,7 +97,7 @@ def fake_comments(count=500):
         db.session.add(comment)
     db.session.commit()
 
-    # replies
+    # 回复
     for i in range(salt):
         comment = Comment(
             author=fake.name(),
